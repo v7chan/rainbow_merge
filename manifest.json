@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Rainbow Merge",
+  "version": "1.0",
+  "description": "Animate the merge button into a rainbow, because",
+  "icons": {
+    "32": "images/icon-32.png",
+    "128": "images/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "css": ["scripts/mergeColors.css"],
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://github.com/*pull*"
+      ]
+    }
+  ]
+}
